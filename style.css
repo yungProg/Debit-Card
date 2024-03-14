@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 100%;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 40rem;
+    margin: auto;
+}
+
+form {
+    margin-top: 4rem;
+}
+
+fieldset {
+    width: 100%;
+}
+
+legend {
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.card-container {
+    width: 30rem;
+    height: 16rem;
+    perspective: 1000px;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+
+.card-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: inherit;
+    border: 1px solid blueviolet;
+}
+
+.card-container:hover .card-wrapper {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: aquamarine;
+    border-radius: inherit;
+}
+
+.front-items-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: inherit;
+}
+
+.card-number-wrapper {
+    font-size: 1.2rem;
+    word-spacing: 0.3rem;
+}
+
+.card-number-wrapper, .card-front-bottom {
+    outline: 1px solid red;
+    width: 90%;
+    margin: 3rem auto 0 auto;
+    padding: 0.5rem;
+}
+
+.card-number-wrapper span:nth-child(4n) {
+    margin-right: 1.4rem;
+}
+
+.card-front-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.card-front-bottom p {
+    margin-bottom: 0.5rem;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: brown;
+}
+
+.cvv-wrapper {
+    display: flex;
+    width: 90%;
+    height: 2rem;
+    margin: auto;
+    margin-top: 10rem;
+    background-color: cadetblue;
+}
+
+.cvv-seal {
+    height: 100%;
+    flex: 0 0 85%;
+    background: repeating-linear-gradient(45deg, #000, #FFF 1%);
+}
+
+.cvv-display {
+    flex: 0 0 15%;
+    background-color: #f1f1f1;
+}
+
+/*input field style*/
+
+.user-inputs {
+    width: 32rem;
+    margin: auto;
+}
+
+input, select {
+    outline: none;
+    border: 1.6px solid #000;
+}
+
+.relative {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.relative input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.55rem 1.2rem;
+    border-radius: 1rem;
+}
+
+.absolute {
+    position: absolute;
+    top: 0.65rem;
+    left: 1.2rem;
+    font-size: 1.2rem;
+    transition: all 300ms;
+}
+
+.relative input:focus ~ .absolute, .relative input:not(:placeholder-shown) ~ .absolute {
+    top: -0.45rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #313131;
+    background-color: #FFF;
+}
+
+.expiry-cvv-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    font-size: 1.2rem;
+}
+
+.expiry {
+    display: flex;
+    flex: 1 1 20%;
+}
+
+.month, .year {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+select {
+    font-size: 1rem;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.cvv {
+    flex: 1 1 20%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+input[name=cvv] {
+    width: auto;
+}

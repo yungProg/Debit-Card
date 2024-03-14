@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <legend>
+                    <div class="card-container">
+                        <div class="card-wrapper">
+                            <div class="card-front">
+                                <div class="front-items-container">
+                                    <div class="card-number-wrapper">
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                        <span>#</span>
+                                    </div>
+                                    <div class="card-front-bottom">
+                                        <div class="card-holder-wrapper">
+                                            <p>CARD HOLDER</p>
+                                            <div class="card-holder">JOHN</div>
+                                        </div>
+                                        <div class="expiry-wrapper">
+                                            <p>EXPIRY DATE</p>
+                                            <div class="expiry-m-y">
+                                                <span>MM</span><span>/</span><span>YY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="cvv-wrapper">
+                                    <div class="cvv-seal"></div>
+                                    <div class="cvv-display"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </legend>
+                <div class="user-inputs">
+                    <div class="number-name-container">
+                        <div class="number-wrapper relative">
+                            <input 
+                            type="number"
+                            id="card-number"
+                            placeholder=" "
+                            />
+                            <label class="absolute" for="card-number">Card Number</label>
+                        </div>
+                        <div class="name-wrapper relative">
+                            <input 
+                            type="text"
+                            id="card-name"
+                            placeholder=" "
+                            />
+                            <label class="absolute" for="card-name">Card Holder</label>
+                        </div>
+                    </div>
+                    <div class="expiry-cvv-wrapper">
+                        <div class="expiry">
+                            <div class="month">
+                                <label for="mo">Month</label>
+                                <select id="mo">
+                                    <option value="" selected disabled style="display: none;">Month</option>
+                                    <option value="01">January</option>
+                                    <option value="02">February</option>
+                                    <option value="03">March</option>
+                                    <option value="04">April</option>
+                                    <option value="05">May</option>
+                                    <option value="06">June</option>
+                                    <option value="07">July</option>
+                                    <option value="08">August</option>
+                                    <option value="09">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                            <div class="year">
+                                <label for="yr">Year</label>
+                                <select id="yr">
+                                    <option value="" selected disabled style="display: none;">Year</option>
+                                    <option value="24">2024</option>
+                                    <option value="25">2025</option>
+                                    <option value="26">2026</option>
+                                    <option value="27">2027</option>
+                                    <option value="28">2028</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cvv relative">
+                            <input 
+                            name="cvv"
+                            type="number" 
+                            id="cvv"
+                            max="999"
+                            placeholder=" "
+                            />
+                            <label class="absolute" for="cvv">CVV</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
