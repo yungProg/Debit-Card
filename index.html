@@ -15,6 +15,10 @@
                         <div class="card-wrapper">
                             <div class="card-front">
                                 <div class="front-items-container">
+                                    <div class="front-top">
+                                        <h1>DEBIT CARD</h1>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="mastercard"><path fill="#FF5F00" d="M15.245 17.831h-6.49V6.168h6.49v11.663z"></path><path fill="#EB001B" d="M9.167 12A7.404 7.404 0 0 1 12 6.169 7.417 7.417 0 0 0 0 12a7.417 7.417 0 0 0 11.999 5.831A7.406 7.406 0 0 1 9.167 12z"></path><path fill="#F79E1B" d="M24 12a7.417 7.417 0 0 1-12 5.831c1.725-1.358 2.833-3.465 2.833-5.831S13.725 7.527 12 6.169A7.417 7.417 0 0 1 24 12z"></path></svg>
+                                    </div>
                                     <div class="card-number-wrapper">
                                         <span>#</span>
                                         <span>#</span>
@@ -38,13 +42,13 @@
                                     </div>
                                     <div class="card-front-bottom">
                                         <div class="card-holder-wrapper">
-                                            <p>CARD HOLDER</p>
-                                            <div class="card-holder">JOHN</div>
+                                            <p style="font-size: 0.85rem; font-weight: 700;">CARD HOLDER</p>
+                                            <div class="card-holder">NAME</div>
                                         </div>
                                         <div class="expiry-wrapper">
-                                            <p>EXPIRY DATE</p>
+                                            <p style="font-size: 0.85rem; font-weight: 700;">EXPIRES</p>
                                             <div class="expiry-m-y">
-                                                <span>MM</span><span>/</span><span>YY</span>
+                                                <span id="mm">MM</span><span>/</span><span id="yy">YY</span>
                                             </div>
                                         </div>
                                     </div>
@@ -66,6 +70,7 @@
                             type="number"
                             id="card-number"
                             placeholder=" "
+                            maxlength="16"
                             />
                             <label class="absolute" for="card-number">Card Number</label>
                         </div>
@@ -74,6 +79,7 @@
                             type="text"
                             id="card-name"
                             placeholder=" "
+                            maxlength="13"
                             />
                             <label class="absolute" for="card-name">Card Holder</label>
                         </div>
@@ -115,7 +121,7 @@
                             name="cvv"
                             type="number" 
                             id="cvv"
-                            max="999"
+                            maxlength="3"
                             placeholder=" "
                             />
                             <label class="absolute" for="cvv">CVV</label>

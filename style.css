@@ -22,6 +22,7 @@ form {
 
 fieldset {
     width: 100%;
+    border: none;
 }
 
 legend {
@@ -44,11 +45,16 @@ legend {
     transition: transform 1s;
     transform-style: preserve-3d;
     border-radius: inherit;
-    border: 1px solid blueviolet;
+    box-shadow:  20px 20px 60px #9e9a9a,
+             -20px -20px 60px #d6d0d0;
 }
 
-.card-container:hover .card-wrapper {
+ .flip, .card-wrapper:hover {
     transform: rotateY(180deg);
+}
+
+.card-front {
+    background: linear-gradient(180deg, #313131 20%, #45f5a4);
 }
 
 .card-front, .card-back {
@@ -57,7 +63,6 @@ legend {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    background-color: aquamarine;
     border-radius: inherit;
 }
 
@@ -66,8 +71,23 @@ legend {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     border-radius: inherit;
+}
+
+.front-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1rem;
+    margin: auto 1.5rem;
+    color: azure;
+}
+
+#mastercard {
+    width: 4rem;
+    margin: 1.5rem 1.5rem 0 auto;
 }
 
 .card-number-wrapper {
@@ -76,29 +96,32 @@ legend {
 }
 
 .card-number-wrapper, .card-front-bottom {
-    outline: 1px solid red;
     width: 90%;
-    margin: 3rem auto 0 auto;
+    margin: 0.3rem auto 0 auto;
     padding: 0.5rem;
 }
 
 .card-number-wrapper span:nth-child(4n) {
-    margin-right: 1.4rem;
+    margin-right: 1.3rem;
 }
 
 .card-front-bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 0;
+    margin-top: 1.5rem;
 }
 
 .card-front-bottom p {
     margin-bottom: 0.5rem;
 }
 
+.expiry-wrapper, .card-holder-wrapper {
+    padding: 0.5rem 1.5rem;
+}
+
 .card-back {
     transform: rotateY(180deg);
-    background-color: brown;
+    background: rgb(74, 84, 79);
 }
 
 .cvv-wrapper {
@@ -107,7 +130,6 @@ legend {
     height: 2rem;
     margin: auto;
     margin-top: 10rem;
-    background-color: cadetblue;
 }
 
 .cvv-seal {
@@ -119,6 +141,10 @@ legend {
 .cvv-display {
     flex: 0 0 15%;
     background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-family: cursive, sans-serif;
 }
 
 /*input field style*/
@@ -129,7 +155,6 @@ legend {
 }
 
 input, select {
-    outline: none;
     border: 1.6px solid #000;
 }
 
@@ -196,4 +221,8 @@ select {
 
 input[name=cvv] {
     width: auto;
+}
+
+input {
+    letter-spacing: 0.2rem;
 }
